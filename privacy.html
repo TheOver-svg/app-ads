@@ -16,7 +16,7 @@
 <h1>Політика конфіденційності EnergyCoordinator</h1>
 <p class="muted">Набуває чинності: 15 листопада 2026 р.</p>
 
-<p>EnergyCoordinator — неофіційний застосунок, який показує графіки відключень світла та аварійні відключення за вашими адресами. Застосунок не пов'язаний з енергокомпаніями (ДТЕК, ВОЕ тощо) і не є їхнім продуктом. У цьому документі пояснено, які дані збирає застосунок, навіщо і як ними можна керувати.</p>
+<p>EnergyCoordinator — неофіційний застосунок, який показує графіки відключень світла та аварійні відключення за вашими адресами. Застосунок не пов'язаний з АТ «Хмельницькобленерго», АТ «Вінницяобленерго» та іншими енергокомпаніями і не є їхнім продуктом. Дані про графіки та відключення беруться з їхніх офіційних сайтів <a href="https://hoe.com.ua">hoe.com.ua</a> та <a href="https://voe.com.ua">voe.com.ua</a>. У цьому документі пояснено, які дані збирає застосунок, навіщо і як ними можна керувати.</p>
 
 <h2>Акаунт не потрібен</h2>
 <p>У застосунку немає реєстрації та входу. Ми не просимо ім'я, email, номер телефону чи платіжні дані.</p>
@@ -32,6 +32,7 @@
 <h2>Сторонні сервіси</h2>
 <ul>
   <li><b>Google Firebase Cloud Messaging</b> — доставка push-сповіщень.</li>
+  <li><b>Сайти енергокомпаній</b> (hoe.com.ua, voe.com.ua) — щоб визначити чергу та знайти адресу, сервер надсилає їм назву населеного пункту, вулицю й номер будинку, а також текст, який ви вводите під час пошуку населеного пункту чи вулиці. Токен та інші дані про ваш пристрій на ці сайти не передаються.</li>
   <li><b>Хостинг сервера</b> — сервер застосунку розміщено у стороннього хостинг-провайдера.</li>
   <li><b>Монобанк</b> — посилання «Задонатити на банку» відкриває сторінку Монобанку в браузері. Донат добровільний, нічого в застосунку не відкриває, а дані платежу обробляє Монобанк, не ми.</li>
 </ul>
@@ -41,7 +42,8 @@
 <p>Обмін даними між застосунком і сервером відбувається через захищене з'єднання (HTTPS).</p>
 
 <h2>Зберігання та видалення</h2>
-<p>Дані адреси зберігаються на сервері, поки адреса є у застосунку. Коли ви видаляєте адресу, застосунок повідомляє серверу оновлений список, і сервер видаляє цю адресу з підписок. Щоб видалити всі свої дані, видаліть усі адреси в застосунку, а потім сам застосунок. Також можна написати нам на адресу нижче: ми видалимо дані, пов'язані з вашим пристроєм.</p>
+<p>Дані адреси зберігаються на сервері, поки адреса є у застосунку. Коли ви видаляєте адресу, застосунок повідомляє серверу оновлений список, і сервер видаляє цю адресу з підписок. Щоб видалити всі свої дані, видаліть усі адреси в застосунку, а потім сам застосунок. Після видалення застосунку токен і пов'язані з ним дані автоматично видаляються з сервера невдовзі: щойно сервер спробує надіслати сповіщення і Firebase повідомить, що токен більше не дійсний.</p>
+<p>Сервер щодня робить резервну копію бази даних і зберігає кожну копію 30 днів, тому видалені дані можуть залишатися в резервних копіях до 30 днів, після чого видаляються остаточно.</p>
 
 <h2>Діти</h2>
 <p>Застосунок не призначений для дітей до 13 років, і ми свідомо не збираємо їхні дані.</p>
@@ -57,7 +59,7 @@
 <h1>EnergyCoordinator Privacy Policy</h1>
 <p class="muted">Effective: November 15, 2026</p>
 
-<p>EnergyCoordinator is an unofficial app that shows scheduled and emergency power outages for your addresses. It is not affiliated with or endorsed by energy companies (DTEK, VOE, etc.).</p>
+<p>EnergyCoordinator is an unofficial app that shows scheduled and emergency power outages for your addresses. It is not affiliated with or endorsed by JSC Khmelnytskoblenergo, JSC Vinnytsiaoblenergo or any other energy company. Outage data is taken from their official websites <a href="https://hoe.com.ua">hoe.com.ua</a> and <a href="https://voe.com.ua">voe.com.ua</a>.</p>
 
 <h2>No account</h2>
 <p>The app has no sign-up or login. We do not ask for your name, email, phone number or payment details.</p>
@@ -71,10 +73,10 @@
 <p>The app does not use device location; you enter addresses yourself.</p>
 
 <h2>Third-party services</h2>
-<p>Google Firebase Cloud Messaging (notifications), a third-party hosting provider for our server, and Monobank (the optional "Donate via Monobank" link opens Monobank's page in a browser; donations unlock nothing in the app and payment data is handled by Monobank). We do not sell your data.</p>
+<p>Google Firebase Cloud Messaging (notifications); energy company websites (hoe.com.ua, voe.com.ua), to which our server sends the settlement, street and house number, plus the text you type when searching for a settlement or street, in order to determine your queue and look up addresses (no token or other device data is sent to them); a third-party hosting provider for our server; and Monobank (the optional "Donate via Monobank" link opens Monobank's page in a browser; donations unlock nothing in the app and payment data is handled by Monobank). We do not sell your data or share it with third parties other than the services listed above.</p>
 
 <h2>Security, retention and deletion</h2>
-<p>Data is transmitted over HTTPS. Address data is kept on the server while the address exists in the app; deleting an address removes it from the server subscriptions. To delete all your data, remove all addresses and uninstall the app, or contact us and we will delete the data linked to your device.</p>
+<p>Data is transmitted over HTTPS. Address data is kept on the server while the address exists in the app; deleting an address removes it from the server subscriptions. To delete all your data, remove all addresses and uninstall the app. After uninstalling, the token and related data are removed from the server automatically shortly afterwards, once the server next tries to send a notification and Firebase reports the token as invalid. The server makes a daily database backup kept for 30 days, so deleted data may remain in backups for up to 30 days before being permanently erased.</p>
 
 <h2>Children</h2>
 <p>The app is not directed to children under 13, and we do not knowingly collect their data.</p>
